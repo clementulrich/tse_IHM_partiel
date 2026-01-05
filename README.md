@@ -1,3 +1,24 @@
+# Getting Started / Démarrage Rapide
+
+Voici les instructions pour lancer le projet localement :
+
+1.  **Prérequis** : Avoir Node.js et Angular CLI installés.
+2.  **Se placer dans le bon dossier** :
+    ```bash
+    cd appBikes
+    ```
+3.  **Installer les dépendances** :
+    ```bash
+    npm install
+    ```
+4.  **Lancer le serveur de développement** :
+    ```bash
+    ng serve
+    ```
+5.  **Accéder à l'application** : Ouvrez votre navigateur sur `http://localhost:4200`.
+
+---
+
 # Première phase de projet
 ## Modalitiés
 
@@ -37,7 +58,7 @@ The single page app displays at least :
     - see the details of a given bike in a dedicated page, or section, or modal (up to you)
 - a cart page with the items added to cart, and the possibility to remove an item to the cart
 
-
+---
 
 # Seconde phase du projet
 ## Modalities
@@ -67,7 +88,7 @@ There should be a link to a bikes page and another link to an accessories page i
 
 Both kind of products can be added / removed to / from the card.
 
-
+---
 
 # Troisème phase du projet
 ## Modalities
@@ -84,7 +105,8 @@ The client has adopted a proprietary product for its catalog.
 As a consequence :
 
 - the API for bikes is imposed :
- 
+
+```json 
 {
   "bikes": [
     {
@@ -113,10 +135,11 @@ As a consequence :
     }
   ]
 }
-
+```
 
 - the API for accessories is imposed :
 
+```json
 [
     {
       "name": "Casque vélo Urban Safe",
@@ -144,6 +167,7 @@ As a consequence :
       "price": 19.99
     }
 ]
+```
 
 
 

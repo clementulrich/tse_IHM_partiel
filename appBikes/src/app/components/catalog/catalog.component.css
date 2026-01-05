@@ -7,13 +7,14 @@
 .filters {
     width: 250px;
     flex-shrink: 0;
-    background: var(--white);
+    background: var(--card-bg);
     padding: 1.5rem;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     height: fit-content;
     position: sticky;
     top: 80px;
+    border: 1px solid var(--border-color);
 }
 
 .filters h2 {
@@ -21,7 +22,7 @@
     margin-bottom: 1.5rem;
     font-size: 1.2rem;
     color: var(--text-color);
-    border-bottom: 2px solid var(--secondary-color);
+    border-bottom: 1px solid var(--border-color);
     padding-bottom: 0.5rem;
 }
 
@@ -34,15 +35,17 @@
     margin-bottom: 0.5rem;
     font-weight: 600;
     font-size: 0.9rem;
-    color: var(--text-color);
+    color: var(--text-muted);
 }
 
 .filter-group input[type="text"] {
     width: 100%;
     padding: 0.6rem;
-    border: 1px solid #d2d2d7;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
     border-radius: 4px;
     font-size: 0.9rem;
+    color: var(--text-color);
 }
 
 .checkbox-group {

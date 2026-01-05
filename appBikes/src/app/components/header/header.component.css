@@ -4,13 +4,14 @@
   align-items: center;
   padding: 0 2rem;
   height: 64px;
-  background-color: var(--dark-bg, #1d1d1f);
-  /* Use var with fallback */
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background-color: rgba(15, 23, 42, 0.85);
+  /* Dark Slate with transparency */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   position: sticky;
   top: 0;
   z-index: 1000;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .logo a {
