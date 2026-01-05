@@ -10,7 +10,7 @@
         "price": 1299.00,
         "brand": "UrbanRide",
         "stock": 8,
-        "imageUrl": "https://placehold.co/400x300?text=Riverside+320"
+        "imageUrl": "assets/images/bikes/1.png"
     },
     {
         "id": 2,
@@ -22,7 +22,7 @@
         "price": 899.00,
         "brand": "AlpTrack",
         "stock": 12,
-        "imageUrl": "https://placehold.co/400x300?text=RockTrek+540"
+        "imageUrl": "assets/images/bikes/2.png"
     },
     {
         "id": 3,
@@ -34,7 +34,7 @@
         "price": 1599.00,
         "brand": "RacePro",
         "stock": 5,
-        "imageUrl": "https://placehold.co/400x300?text=AeroSpeed+700"
+        "imageUrl": "assets/images/bikes/3.png"
     },
     {
         "id": 4,
@@ -46,7 +46,7 @@
         "price": 349.00,
         "brand": "DailyRide",
         "stock": 15,
-        "imageUrl": "https://placehold.co/400x300?text=Explorer+200"
+        "imageUrl": "assets/images/bikes/4.png"
     },
     {
         "id": 5,
@@ -58,7 +58,7 @@
         "price": 249.00,
         "brand": "FunRide",
         "stock": 20,
-        "imageUrl": "https://placehold.co/400x300?text=Spark+24"
+        "imageUrl": "assets/images/bikes/5.png"
     },
     {
         "id": 6,
@@ -71,7 +71,7 @@
         "price": 4999.00,
         "brand": "AlpTrack",
         "stock": 3,
-        "imageUrl": "https://placehold.co/400x300?text=PeakPulse"
+        "imageUrl": "assets/images/bikes/6.png"
     },
     {
         "id": 7,
@@ -84,7 +84,7 @@
         "price": 399.00,
         "brand": "FunRide",
         "stock": 10,
-        "imageUrl": "https://placehold.co/400x300?text=Junior+Trail"
+        "imageUrl": "assets/images/bikes/7.png"
     },
     {
         "id": 8,
@@ -96,7 +96,7 @@
         "price": 6899.00,
         "brand": "RacePro",
         "stock": 2,
-        "imageUrl": "https://placehold.co/400x300?text=Highway+900"
+        "imageUrl": "assets/images/bikes/8.png"
     },
     {
         "id": 9,
@@ -109,6 +109,6 @@
         "price": 1799.00,
         "brand": "UrbanRide",
         "stock": 6,
-        "imageUrl": "https://placehold.co/400x300?text=Sunset+Trek"
+        "imageUrl": "assets/images/bikes/9.png"
     }
 ]
