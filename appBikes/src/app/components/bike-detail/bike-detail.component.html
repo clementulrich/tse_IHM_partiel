@@ -8,8 +8,11 @@
         <div class="detail-content">
             <h1>{{ b.name }}</h1>
             <div class="tags">
-                @for (cat of b.category; track cat) {
+                <span class="tag tag-type">{{ b.category | titlecase }}</span>
+                @if (b.sub_category) {
+                @for (cat of b.sub_category; track cat) {
                 <span class="tag">{{ cat }}</span>
+                }
                 }
             </div>
             <p class="description">{{ b.description }}</p>

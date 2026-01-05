@@ -1,0 +1,65 @@
+<div class="catalog-page">
+    <aside class="filters">
+        <h2>Filters</h2>
+
+        <div class="filter-group">
+            <label>Search</label>
+            <input type="text" [ngModel]="searchQuery()" (ngModelChange)="searchQuery.set($event)"
+                placeholder="Search products...">
+        </div>
+
+        <div class="filter-group">
+            <label>Category</label>
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox" [checked]="showBikes()" (change)="showBikes.set(!showBikes())">
+                    Bikes
+                </label>
+                <label>
+                    <input type="checkbox" [checked]="showAccessories()"
+                        (change)="showAccessories.set(!showAccessories())">
+                    Accessories
+                </label>
+            </div>
+        </div>
+
+        <div class="filter-group">
+            <label>Max Price: {{ maxPrice() | currency:'EUR' }}</label>
+            <input type="range" min="0" max="8000" step="50" [ngModel]="maxPrice()"
+                (ngModelChange)="maxPrice.set($event)">
+        </div>
+    </aside>
+
+    <main class="product-list">
+        <h1>All Products</h1>
+        <div class="bike-grid">
+            @for (product of filteredProducts(); track product.id) {
+            <div class="bike-card">
+                <img [src]="product.imageUrl" [alt]="product.name" class="bike-image">
+                <div class="bike-info">
+                    <h3>{{ product.name }}</h3>
+                    <div class="tags">
+                        <span class="tag type-tag">{{ product.category | titlecase }}</span>
+                        @if (product.sub_category) {
+                        @for (sub of product.sub_category; track sub) {
+                        <span class="tag">{{ sub }}</span>
+                        }
+                        }
+                    </div>
+                    <p class="price">{{ product.price | currency:'EUR' }}</p>
+                    <div class="actions">
+                        @if (product.category === 'bike') {
+                        <a [routerLink]="['/bikes', product.id]" class="btn-details">Details</a>
+                        }
+                        <button (click)="addToCart(product)" class="btn-add">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            } @empty {
+            <div class="no-results">
+                <p>No products found matching your filters.</p>
+            </div>
+            }
+        </div>
+    </main>
+</div>

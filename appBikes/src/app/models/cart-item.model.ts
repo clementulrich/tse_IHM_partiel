@@ -1,7 +1,4 @@
-import { Bike } from './bike.model';
-import { Accessory } from './accessory.model';
-
-export type Product = Bike | Accessory;
+import { Product } from './product.model';
 
 export interface CartItem {
     product: Product;

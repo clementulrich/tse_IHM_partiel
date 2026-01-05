@@ -2,6 +2,7 @@
     {
         "id": 1,
         "name": "Helmet Pro",
+        "category": "accessory",
         "description": "Casque léger avec ventilation optimisée et molette de réglage pour les trajets quotidiens et les sorties sportives.",
         "price": 59.90,
         "imageUrl": "assets/images/accessories/helmet-pro.jpg"
@@ -9,6 +10,7 @@
     {
         "id": 2,
         "name": "Bike Lock",
+        "category": "accessory",
         "description": "Antivol en U avec câble additionnel pour sécuriser cadre et roue avant lors de vos arrêts en ville.",
         "price": 39.90,
         "imageUrl": "assets/images/accessories/bike-lock.jpg"
@@ -16,6 +18,7 @@
     {
         "id": 3,
         "name": "Water Bottle",
+        "category": "accessory",
         "description": "Gourde vélo 750 ml sans BPA, facile à presser, compatible avec la plupart des porte-bidons.",
         "price": 9.90,
         "imageUrl": "assets/images/accessories/water-bottle.jpg"
@@ -23,6 +26,7 @@
     {
         "id": 4,
         "name": "Gloves",
+        "category": "accessory",
         "description": "Gants demi-doigts rembourrés pour améliorer le confort et l’adhérence sur le guidon.",
         "price": 24.90,
         "imageUrl": "assets/images/accessories/gloves.jpg"
@@ -30,6 +34,7 @@
     {
         "id": 5,
         "name": "LED Light Set",
+        "category": "accessory",
         "description": "Kit éclairage avant/arrière USB pour rester visible de nuit ou par faible luminosité.",
         "price": 29.90,
         "imageUrl": "assets/images/accessories/led-light-set.jpg"
@@ -37,6 +42,7 @@
     {
         "id": 6,
         "name": "Phone Mount",
+        "category": "accessory",
         "description": "Support smartphone orientable fixé au guidon, compatible avec la plupart des téléphones 4,7 à 6,7 pouces.",
         "price": 19.90,
         "imageUrl": "assets/images/accessories/phone-mount.jpg"
@@ -44,6 +50,7 @@
     {
         "id": 7,
         "name": "Saddle Bag",
+        "category": "accessory",
         "description": "Sacoche de selle compacte pour emporter chambre à air, démonte-pneus et clés essentielles.",
         "price": 22.50,
         "imageUrl": "assets/images/accessories/saddle-bag.jpg"
@@ -51,6 +58,7 @@
     {
         "id": 8,
         "name": "Mini Pump",
+        "category": "accessory",
         "description": "Mini pompe alu avec fixation cadre, compatible valves Presta et Schrader, idéale pour les dépannages.",
         "price": 27.90,
         "imageUrl": "assets/images/accessories/mini-pump.jpg"
@@ -58,6 +66,7 @@
     {
         "id": 9,
         "name": "Multi-Tool",
+        "category": "accessory",
         "description": "Outil multifonctions pliable avec clés Allen, tournevis et démonte-chaîne pour les réglages rapides.",
         "price": 19.50,
         "imageUrl": "assets/images/accessories/multi-tool.jpg"
@@ -65,6 +74,7 @@
     {
         "id": 10,
         "name": "Rear Rack",
+        "category": "accessory",
         "description": "Porte-bagages arrière compatible avec la plupart des vélos urbains, charge max 25 kg.",
         "price": 49.90,
         "imageUrl": "assets/images/accessories/rear-rack.jpg"
@@ -72,6 +82,7 @@
     {
         "id": 11,
         "name": "Mudguards Set",
+        "category": "accessory",
         "description": "Jeu de garde-boues avant et arrière pour roues 28 pouces, pratique par temps de pluie.",
         "price": 34.90,
         "imageUrl": "assets/images/accessories/mudguards-set.jpg"
@@ -79,6 +90,7 @@
     {
         "id": 12,
         "name": "Chain Lube",
+        "category": "accessory",
         "description": "Lubrifiant chaîne toutes conditions pour maintenir une transmission fluide et silencieuse.",
         "price": 8.90,
         "imageUrl": "assets/images/accessories/chain-lube.jpg"

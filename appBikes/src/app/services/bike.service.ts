@@ -1,9 +1,9 @@
 import { Injectable, signal, computed } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Bike } from '../models/bike.model';
-import { Accessory } from '../models/accessory.model';
-import { CartItem, Product } from '../models/cart-item.model';
-import { Observable } from 'rxjs';
+import { Product } from '../models/product.model';
+import { CartItem } from '../models/cart-item.model';
+import { Observable, forkJoin } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable({
     providedIn: 'root'
@@ -19,15 +19,36 @@ export class BikeService {
 
     constructor(private http: HttpClient) { }
 
-    getBikes(): Observable<Bike[]> {
-        return this.http.get<Bike[]>('/bikes.json');
+    // Fetch bikes from the new { "bikes": [...] } element
+    getBikes(): Observable<Product[]> {
+        return this.http.get<{ bikes: any[] }>('/bikes.json').pipe(
+            map(response => response.bikes.map(b => ({
+                ...b,
+                category: 'bike' // Ensure category is strictly set if missing, though JSON has it
+            } as Product)))
+        );
     }
 
-    getAccessories(): Observable<Accessory[]> {
-        return this.http.get<Accessory[]>('/accessories.json');
+    getAccessories(): Observable<Product[]> {
+        return this.http.get<any[]>('/accessories.json').pipe(
+            map(items => items.map(a => ({
+                ...a,
+                category: 'accessory'
+            } as Product)))
+        );
     }
 
-    getBikeById(id: number): Observable<Bike | undefined> {
+    // New unified method for the single catalog page
+    getAllProducts(): Observable<Product[]> {
+        return forkJoin({
+            bikes: this.getBikes(),
+            accessories: this.getAccessories()
+        }).pipe(
+            map(results => [...results.bikes, ...results.accessories])
+        );
+    }
+
+    getBikeById(id: number): Observable<Product | undefined> {
         return new Observable(observer => {
             this.getBikes().subscribe({
                 next: (bikes) => {
@@ -40,8 +61,12 @@ export class BikeService {
         });
     }
 
-    addToCart(product: Product, type: 'bike' | 'accessory') {
-        this.cartItems.update(items => [...items, { product, type }]);
+    addToCart(product: Product) {
+        // Type is now intrinsic to the product, but we keep the cart item structure if needed
+        // Or we simplify. The previous code used { product, type }.
+        // Let's infer type from product.category for backward compat if needed, 
+        // or just use product.category.
+        this.cartItems.update(items => [...items, { product, type: product.category }]);
     }
 
     removeFromCart(productId: number, type: 'bike' | 'accessory') {
