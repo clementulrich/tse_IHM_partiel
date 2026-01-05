@@ -7,7 +7,11 @@
             <img [src]="bike.imageUrl" [alt]="bike.name" class="bike-image">
             <div class="bike-info">
                 <h3>{{ bike.name }}</h3>
-                <span class="tag">{{ bike.category }}</span>
+                <div class="tags">
+                    @for (cat of bike.category; track cat) {
+                    <span class="tag">{{ cat }}</span>
+                    }
+                </div>
                 <p class="price">{{ bike.price | currency:'EUR' }}</p>
                 <div class="actions">
                     <a [routerLink]="['/bikes', bike.id]" class="btn-details">Details</a>

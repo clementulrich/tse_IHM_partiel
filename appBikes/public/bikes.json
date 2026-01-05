@@ -1,42 +1,114 @@
 [
     {
         "id": 1,
-        "name": "Urban Cruiser",
-        "category": "City",
-        "description": "A comfortable bike for city commutes.",
-        "price": 450,
-        "imageUrl": "https://placehold.co/400x300?text=Urban+Cruiser"
+        "name": "Riverside 320 E-City",
+        "category": [
+            "City",
+            "Electric"
+        ],
+        "description": "Vélo électrique urbain parfait pour les trajets quotidiens en ville. Assistance jusqu'à 25 km/h, selle confortable et porte-bagages intégré pour transporter vos affaires. Idéal pour aller au travail sans transpirer !",
+        "price": 1299.00,
+        "brand": "UrbanRide",
+        "stock": 8,
+        "imageUrl": "https://placehold.co/400x300?text=Riverside+320"
     },
     {
         "id": 2,
-        "name": "Mountain Beast",
-        "category": "Mountain",
-        "description": "Durable and robust for off-road trails.",
-        "price": 750,
-        "imageUrl": "https://placehold.co/400x300?text=Mountain+Beast"
+        "name": "RockTrek 540",
+        "category": [
+            "Mountain"
+        ],
+        "description": "VTT semi-rigide pour trails et chemins techniques. Freins à disque hydrauliques, débattement 120mm à l'avant, géométrie agressive pour les descentes. Parfait pour les riders qui veulent progresser en mountain bike.",
+        "price": 899.00,
+        "brand": "AlpTrack",
+        "stock": 12,
+        "imageUrl": "https://placehold.co/400x300?text=RockTrek+540"
     },
     {
         "id": 3,
-        "name": "Speed Racer",
-        "category": "Road",
-        "description": "Lightweight and fast for long distances.",
-        "price": 1200,
-        "imageUrl": "https://placehold.co/400x300?text=Speed+Racer"
+        "name": "AeroSpeed 700",
+        "category": [
+            "Road"
+        ],
+        "description": "Vélo de route aluminium performant pour sorties club et granfondos. Géométrie racing, groupe Shimano 105, roues 28 pouces tubeless-ready. Vous sentirez la différence dès les premières accélérations !",
+        "price": 1599.00,
+        "brand": "RacePro",
+        "stock": 5,
+        "imageUrl": "https://placehold.co/400x300?text=AeroSpeed+700"
     },
     {
         "id": 4,
-        "name": "Electric Glide",
-        "category": "Electric",
-        "description": "Assisted pedaling for effortless riding.",
-        "price": 1500,
-        "imageUrl": "https://placehold.co/400x300?text=Electric+Glide"
+        "name": "Explorer 200",
+        "category": [
+            "City"
+        ],
+        "description": "Ville hybride entrée de gamme pour balades et trajets courts. 7 vitesses, porte-bagages, garde-boue et éclairage intégré. Le compagnon idéal des nouveaux cyclistes urbains.",
+        "price": 349.00,
+        "brand": "DailyRide",
+        "stock": 15,
+        "imageUrl": "https://placehold.co/400x300?text=Explorer+200"
     },
     {
         "id": 5,
-        "name": "Kids Explorer",
-        "category": "Kids",
-        "description": "Safe and fun for the little ones.",
-        "price": 150,
-        "imageUrl": "https://placehold.co/400x300?text=Kids+Explorer"
+        "name": "Spark 24 Kids",
+        "category": [
+            "Kids"
+        ],
+        "description": "Vélo enfant 24 pouces pour les 8-12 ans. Freins V-brake faciles à utiliser, 6 vitesses et design coloré qui donne envie de pédaler ! Selle réglable et pédales antidérapantes pour la sécurité.",
+        "price": 249.00,
+        "brand": "FunRide",
+        "stock": 20,
+        "imageUrl": "https://placehold.co/400x300?text=Spark+24"
+    },
+    {
+        "id": 6,
+        "name": "PeakPulse E-MTB",
+        "category": [
+            "Mountain",
+            "Electric"
+        ],
+        "description": "VTTAE full suspension pour enduro électrique. Moteur 85Nm de couple, batterie 720Wh pour 80km d'autonomie en terrain difficile. Prêt à envoyer du lourd en montée comme en descente !",
+        "price": 4999.00,
+        "brand": "AlpTrack",
+        "stock": 3,
+        "imageUrl": "https://placehold.co/400x300?text=PeakPulse"
+    },
+    {
+        "id": 7,
+        "name": "Junior Trail 20",
+        "category": [
+            "Kids",
+            "Mountain"
+        ],
+        "description": "VTT enfant 20 pouces pour premières sensations tout-terrain. Suspension avant 80mm, 7 vitesses et pneus larges pour la stabilité. Parfait pour initier les petits aux joies du VTT !",
+        "price": 399.00,
+        "brand": "FunRide",
+        "stock": 10,
+        "imageUrl": "https://placehold.co/400x300?text=Junior+Trail"
+    },
+    {
+        "id": 8,
+        "name": "Highway 900 Carbon",
+        "category": [
+            "Road"
+        ],
+        "description": "Vélo de route carbone haut de gamme pour compétitions. Cadre ultraléger 850g, groupe SRAM Red eTap AXS, roues carbone. Pour les cyclistes qui ne font pas de compromis sur la performance.",
+        "price": 6899.00,
+        "brand": "RacePro",
+        "stock": 2,
+        "imageUrl": "https://placehold.co/400x300?text=Highway+900"
+    },
+    {
+        "id": 9,
+        "name": "Sunset Trek E",
+        "category": [
+            "City",
+            "Electric"
+        ],
+        "description": "Vélo électrique pliant pour la ville et les vacances. Compact (16 pouces), assistance 250W, autonomie 60km. Parfait pour les trajets domicile-travail et les balades du dimanche.",
+        "price": 1799.00,
+        "brand": "UrbanRide",
+        "stock": 6,
+        "imageUrl": "https://placehold.co/400x300?text=Sunset+Trek"
     }
 ]

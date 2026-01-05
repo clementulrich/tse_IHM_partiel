@@ -46,6 +46,13 @@ h1 {
     font-size: 1.25rem;
 }
 
+.tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
 .tag {
     align-self: flex-start;
     background-color: #f1f2f6;
@@ -53,7 +60,6 @@ h1 {
     padding: 0.25rem 0.5rem;
     border-radius: 4px;
     font-size: 0.85rem;
-    margin-bottom: 1rem;
 }
 
 .price {

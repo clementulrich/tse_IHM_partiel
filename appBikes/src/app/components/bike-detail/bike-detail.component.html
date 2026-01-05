@@ -7,7 +7,11 @@
         <img [src]="b.imageUrl" [alt]="b.name" class="detail-image">
         <div class="detail-content">
             <h1>{{ b.name }}</h1>
-            <span class="tag">{{ b.category }}</span>
+            <div class="tags">
+                @for (cat of b.category; track cat) {
+                <span class="tag">{{ cat }}</span>
+                }
+            </div>
             <p class="description">{{ b.description }}</p>
             <p class="price">{{ b.price | currency:'EUR' }}</p>
             <button (click)="addToCart()" class="btn-add-large">Add to Cart</button>
