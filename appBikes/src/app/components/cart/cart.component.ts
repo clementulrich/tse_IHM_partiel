@@ -15,7 +15,7 @@ export class CartComponent {
     cartItems = this.bikeService.cart;
     total = this.bikeService.cartTotal;
 
-    removeFromCart(id: number) {
-        this.bikeService.removeFromCart(id);
+    removeFromCart(id: number, type: 'bike' | 'accessory') {
+        this.bikeService.removeFromCart(id, type);
     }
 }

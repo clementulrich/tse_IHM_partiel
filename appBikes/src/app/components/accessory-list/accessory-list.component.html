@@ -1,0 +1,19 @@
+<div class="catalog-container">
+    <h1>Accessories</h1>
+
+    <div class="bike-grid">
+        @for (acc of accessories$ | async; track acc.id) {
+        <div class="bike-card">
+            <img [src]="acc.imageUrl" [alt]="acc.name" class="bike-image">
+            <div class="bike-info">
+                <h3>{{ acc.name }}</h3>
+                <p class="description">{{ acc.description }}</p>
+                <p class="price">{{ acc.price | currency:'EUR' }}</p>
+                <button (click)="addToCart(acc)" class="btn-add">Add to Cart</button>
+            </div>
+        </div>
+        } @empty {
+        <p>Loading accessories...</p>
+        }
+    </div>
+</div>

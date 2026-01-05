@@ -21,6 +21,6 @@ export class BikeListComponent implements OnInit {
     }
 
     addToCart(bike: Bike) {
-        this.bikeService.addToCart(bike);
+        this.bikeService.addToCart(bike, 'bike');
     }
 }

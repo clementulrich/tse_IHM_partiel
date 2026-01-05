@@ -5,12 +5,15 @@
     <div class="cart-items">
         @for (item of cartItems(); track $index) {
         <div class="cart-item">
-            <img [src]="item.imageUrl" [alt]="item.name" class="cart-item-image">
+            <img [src]="item.product.imageUrl" [alt]="item.product.name" class="cart-item-image">
             <div class="cart-item-details">
-                <h3>{{ item.name }}</h3>
-                <p>{{ item.price | currency:'EUR' }}</p>
+                <h3>{{ item.product.name }}</h3>
+                <p>{{ item.product.price | currency:'EUR' }}</p>
+                @if (item.type === 'accessory') {
+                <span class="badge-accessory">Accessory</span>
+                }
             </div>
-            <button (click)="removeFromCart(item.id)" class="btn-remove">Remove</button>
+            <button (click)="removeFromCart(item.product.id, item.type)" class="btn-remove">Remove</button>
         </div>
         }
     </div>

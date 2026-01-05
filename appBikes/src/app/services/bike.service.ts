@@ -1,17 +1,19 @@
 import { Injectable, signal, computed } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Bike } from '../models/bike.model';
+import { Accessory } from '../models/accessory.model';
+import { CartItem, Product } from '../models/cart-item.model';
 import { Observable } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
 })
 export class BikeService {
-    private cartItems = signal<Bike[]>([]);
+    private cartItems = signal<CartItem[]>([]);
 
     readonly cart = this.cartItems.asReadonly();
 
-    readonly cartTotal = computed(() => this.cartItems().reduce((acc, bike) => acc + bike.price, 0));
+    readonly cartTotal = computed(() => this.cartItems().reduce((acc, item) => acc + item.product.price, 0));
 
     readonly cartCount = computed(() => this.cartItems().length);
 
@@ -21,10 +23,11 @@ export class BikeService {
         return this.http.get<Bike[]>('/bikes.json');
     }
 
+    getAccessories(): Observable<Accessory[]> {
+        return this.http.get<Accessory[]>('/accessories.json');
+    }
+
     getBikeById(id: number): Observable<Bike | undefined> {
-        // Since we are loading from a static JSON, we might need to filter manually after fetch
-        // In a real API, this would be a direct call.
-        // For simplicity with static JSON, we can reuse getBikes and map
         return new Observable(observer => {
             this.getBikes().subscribe({
                 next: (bikes) => {
@@ -37,13 +40,13 @@ export class BikeService {
         });
     }
 
-    addToCart(bike: Bike) {
-        this.cartItems.update(items => [...items, bike]);
+    addToCart(product: Product, type: 'bike' | 'accessory') {
+        this.cartItems.update(items => [...items, { product, type }]);
     }
 
-    removeFromCart(bikeId: number) {
+    removeFromCart(productId: number, type: 'bike' | 'accessory') {
         this.cartItems.update(items => {
-            const index = items.findIndex(i => i.id === bikeId);
+            const index = items.findIndex(i => i.product.id === productId && i.type === type);
             if (index > -1) {
                 const newItems = [...items];
                 newItems.splice(index, 1);

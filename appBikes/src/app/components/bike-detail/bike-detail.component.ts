@@ -30,7 +30,7 @@ export class BikeDetailComponent {
     addToCart() {
         const b = this.bike();
         if (b) {
-            this.bikeService.addToCart(b);
+            this.bikeService.addToCart(b, 'bike');
         }
     }
 }

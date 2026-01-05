@@ -55,6 +55,16 @@ h1 {
     color: white;
 }
 
+.badge-accessory {
+    display: inline-block;
+    background-color: #6c5ce7;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+}
+
 .cart-summary {
     margin-top: 2rem;
     padding: 1.5rem;
