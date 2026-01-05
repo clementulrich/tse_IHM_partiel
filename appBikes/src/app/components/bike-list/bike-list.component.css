@@ -1,39 +1,47 @@
+/* Reusing global grid and card styles implicitly or explicitly */
+
 .catalog-container {
-    padding: 2rem;
+    padding: 2rem 0;
 }
 
 h1 {
     text-align: center;
-    margin-bottom: 2rem;
-    color: #333;
+    margin-bottom: 3rem;
+    color: var(--text-color);
 }
 
 .bike-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
+    padding: 0 1rem;
 }
 
 .bike-card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Using global .card style, but ensuring local overrides if any */
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
     overflow: hidden;
-    transition: transform 0.2s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
 }
 
 .bike-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 }
 
 .bike-image {
     width: 100%;
     height: 250px;
     object-fit: contain;
-    background-color: #f8f9fa;
-    padding: 1rem;
+    background-color: #ffffff;
+    /* White bg for product photos often looks cleaner than grey */
+    padding: 2rem;
+    /* More breathing room */
+    border-bottom: 1px solid #f0f0f0;
 }
 
 .bike-info {
@@ -45,7 +53,8 @@ h1 {
 
 .bike-info h3 {
     margin: 0 0 0.5rem 0;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
+    color: var(--text-color);
 }
 
 .tags {
@@ -57,20 +66,23 @@ h1 {
 
 .tag {
     align-self: flex-start;
-    background-color: #f1f2f6;
-    color: #57606f;
-    padding: 0.25rem 0.5rem;
+    background-color: #f5f5f7;
+    color: #86868b;
+    padding: 0.2rem 0.6rem;
     border-radius: 4px;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .price {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: #2ed573;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-color);
     margin-bottom: 1.5rem;
 }
 
+/* Actions area */
 .actions {
     margin-top: auto;
     display: flex;
@@ -81,29 +93,31 @@ h1 {
 .btn-add {
     flex: 1;
     text-align: center;
-    padding: 0.75rem;
-    border-radius: 4px;
+    padding: 0.8rem;
+    border-radius: 980px;
     cursor: pointer;
     border: none;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
     text-decoration: none;
-    transition: background 0.3s;
+    transition: all 0.2s;
 }
 
 .btn-details {
-    background-color: #f1f2f6;
-    color: #333;
+    background-color: #f5f5f7;
+    color: var(--text-color);
 }
 
 .btn-details:hover {
-    background-color: #dfe4ea;
+    background-color: #e8e8ed;
 }
 
 .btn-add {
-    background-color: #007bff;
+    background-color: var(--primary-color);
     color: white;
 }
 
 .btn-add:hover {
-    background-color: #0056b3;
+    background-color: var(--primary-hover);
+    transform: scale(1.02);
 }

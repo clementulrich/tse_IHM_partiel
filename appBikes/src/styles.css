@@ -1,11 +1,91 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --primary-color: #0071e3;
+    /* Vibrant Blue */
+    --primary-hover: #0077ed;
+    --secondary-color: #f5f5f7;
+    /* Light Gray Background */
+    --dark-bg: #1d1d1f;
+    /* Dark Slate similar to Apple/Nike dark mode */
+    --text-color: #1d1d1f;
+    --text-light: #86868b;
+    --white: #ffffff;
+    --border-radius: 8px;
+    /* Slightly rounded, modern */
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
-    background-color: #f5f6fa;
-    color: #2f3542;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    -webkit-font-smoothing: antialiased;
 }
 
 main {
     padding-bottom: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+/* Global Button Styles */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 980px;
+    /* Pill shape */
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: scale(1.02);
+}
+
+.btn-secondary {
+    background-color: #e8e8ed;
+    color: var(--text-color);
+}
+
+.btn-secondary:hover {
+    background-color: #d2d2d7;
+}
+
+/* Card Common Styles */
+.card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 }
