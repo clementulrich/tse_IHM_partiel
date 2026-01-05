@@ -1,0 +1,98 @@
+.detail-container {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.back-link {
+    margin-bottom: 20px;
+}
+
+.back-link a {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+}
+
+.back-link a:hover {
+    color: #000;
+}
+
+.detail-card {
+    display: flex;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    gap: 2rem;
+}
+
+.detail-image {
+    width: 50%;
+    object-fit: cover;
+    min-height: 400px;
+}
+
+.detail-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.tag {
+    background-color: #f1f2f6;
+    color: #57606f;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.description {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2ed573;
+    margin-bottom: 2rem;
+}
+
+.btn-add-large {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.btn-add-large:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .detail-card {
+        flex-direction: column;
+    }
+
+    .detail-image {
+        width: 100%;
+        min-height: 250px;
+    }
+}

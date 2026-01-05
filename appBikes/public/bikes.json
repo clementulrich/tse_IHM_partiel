@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Urban Cruiser",
+        "category": "City",
+        "description": "A comfortable bike for city commutes.",
+        "price": 450,
+        "imageUrl": "https://placehold.co/400x300?text=Urban+Cruiser"
+    },
+    {
+        "id": 2,
+        "name": "Mountain Beast",
+        "category": "Mountain",
+        "description": "Durable and robust for off-road trails.",
+        "price": 750,
+        "imageUrl": "https://placehold.co/400x300?text=Mountain+Beast"
+    },
+    {
+        "id": 3,
+        "name": "Speed Racer",
+        "category": "Road",
+        "description": "Lightweight and fast for long distances.",
+        "price": 1200,
+        "imageUrl": "https://placehold.co/400x300?text=Speed+Racer"
+    },
+    {
+        "id": 4,
+        "name": "Electric Glide",
+        "category": "Electric",
+        "description": "Assisted pedaling for effortless riding.",
+        "price": 1500,
+        "imageUrl": "https://placehold.co/400x300?text=Electric+Glide"
+    },
+    {
+        "id": 5,
+        "name": "Kids Explorer",
+        "category": "Kids",
+        "description": "Safe and fun for the little ones.",
+        "price": 150,
+        "imageUrl": "https://placehold.co/400x300?text=Kids+Explorer"
+    }
+]

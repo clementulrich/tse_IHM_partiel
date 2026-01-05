@@ -1,0 +1,19 @@
+<div class="detail-container">
+    @if (bike(); as b) {
+    <div class="back-link">
+        <a routerLink="/catalog">← Back to Catalog</a>
+    </div>
+    <div class="detail-card">
+        <img [src]="b.imageUrl" [alt]="b.name" class="detail-image">
+        <div class="detail-content">
+            <h1>{{ b.name }}</h1>
+            <span class="tag">{{ b.category }}</span>
+            <p class="description">{{ b.description }}</p>
+            <p class="price">{{ b.price | currency:'EUR' }}</p>
+            <button (click)="addToCart()" class="btn-add-large">Add to Cart</button>
+        </div>
+    </div>
+    } @else {
+    <p>Loading bike details...</p>
+    }
+</div>

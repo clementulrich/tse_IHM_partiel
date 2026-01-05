@@ -1,0 +1,28 @@
+<div class="cart-container">
+    <h1>Your Cart</h1>
+
+    @if (cartItems().length > 0) {
+    <div class="cart-items">
+        @for (item of cartItems(); track $index) {
+        <div class="cart-item">
+            <img [src]="item.imageUrl" [alt]="item.name" class="cart-item-image">
+            <div class="cart-item-details">
+                <h3>{{ item.name }}</h3>
+                <p>{{ item.price | currency:'EUR' }}</p>
+            </div>
+            <button (click)="removeFromCart(item.id)" class="btn-remove">Remove</button>
+        </div>
+        }
+    </div>
+
+    <div class="cart-summary">
+        <h2>Total: {{ total() | currency:'EUR' }}</h2>
+        <button class="btn-checkout">Proceed to Checkout</button>
+    </div>
+    } @else {
+    <div class="empty-cart">
+        <p>Your cart is empty.</p>
+        <a routerLink="/catalog" class="btn-go-catalog">Go to Catalog</a>
+    </div>
+    }
+</div>

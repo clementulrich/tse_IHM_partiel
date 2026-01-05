@@ -1,0 +1,14 @@
+<header class="header">
+    <div class="logo">
+        <a routerLink="/">🚴 BikeShop</a>
+    </div>
+    <nav class="nav">
+        <a routerLink="/catalog" routerLinkActive="active">Catalog</a>
+        <a routerLink="/cart" routerLinkActive="active" class="cart-link">
+            Cart
+            @if (cartCount() > 0) {
+            <span class="badge">{{ cartCount() }}</span>
+            }
+        </a>
+    </nav>
+</header>
